@@ -1,0 +1,65 @@
+@baseUrl = http://127.0.0.1:5100
+
+# Agent Card — ajanın adı, becerisi ve çağrı adresi
+GET {{baseUrl}}/.well-known/agent-card.json
+Accept: application/json
+
+###
+
+# Domates — Domates: 30 TL/kg
+POST {{baseUrl}}/a2a
+Content-Type: application/json
+A2A-Version: 1.0
+
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "SendMessage",
+  "params": {
+    "message": {
+      "messageId": "{{$guid}}",
+      "role": "ROLE_USER",
+      "parts": [{ "text": "domates" }]
+    }
+  }
+}
+
+###
+
+# Patates — Patates: 20 TL/kg
+POST {{baseUrl}}/a2a
+Content-Type: application/json
+A2A-Version: 1.0
+
+{
+  "jsonrpc": "2.0",
+  "id": 2,
+  "method": "SendMessage",
+  "params": {
+    "message": {
+      "messageId": "{{$guid}}",
+      "role": "ROLE_USER",
+      "parts": [{ "text": "patates" }]
+    }
+  }
+}
+
+###
+
+# Salatalık — ajan desteklenen ürünleri listeler
+POST {{baseUrl}}/a2a
+Content-Type: application/json
+A2A-Version: 1.0
+
+{
+  "jsonrpc": "2.0",
+  "id": 3,
+  "method": "SendMessage",
+  "params": {
+    "message": {
+      "messageId": "{{$guid}}",
+      "role": "ROLE_USER",
+      "parts": [{ "text": "salatalık" }]
+    }
+  }
+}
