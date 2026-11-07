@@ -2,6 +2,10 @@
 
 Bu örnekte bir konsol uygulaması, Fiyat Ajanı’nı keşfeder ve ona bir ürün adı gönderir. Ajan iki örnek kilogram fiyatını kod içinde tutar. Örneği çalıştırmak için .NET 10 SDK yeterlidir. İki proje de resmî A2A .NET SDK’nın `1.0.0-preview4` sürümünü kullanır. [A2A .NET SDK](https://github.com/a2aproject/a2a-dotnet/releases/tag/v1.0.0-preview4)
 
+## Proje görseli
+
+![A2A protokolü ve Fiyat Ajanı proje görseli](doc/rizakaya-ai-a2a-protocol.jpg)
+
 ## Çalıştır
 
 Proje klasöründe ilk terminali aç ve ajanı başlat.
